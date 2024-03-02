@@ -336,7 +336,7 @@ class LoadStreams:
             ### s = eval(s) if s.isnumeric() else s  # i.e. s = '0' local webcam
 
             ### Edits for our project, hard coded cuz'
-            s = "v4l2src device=/dev/video0 ! video/x-raw, width=800, height=600 ! videoconvert ! video/x-raw,format=BGR ! appsink"
+            s = "v4l2src device=/dev/video0 ! video/x-raw, width=640, height=400 ! videoconvert ! video/x-raw,format=BGR ! appsink"
             if s == 0:
                 assert not is_colab(), '--source 0 webcam unsupported on Colab. Rerun command in a local environment.'
                 assert not is_kaggle(), '--source 0 webcam unsupported on Kaggle. Rerun command in a local environment.'
